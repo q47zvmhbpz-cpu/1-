@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>💍 프러포즈</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffe6ef, #fff0f5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    }
+
+    .screen {
+      background: white;
+      width: 420px;
+      padding: 50px 30px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      color: #d6336c;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
+
+    button {
+      font-size: 22px;
+      padding: 14px 40px;
+      border: none;
+      border-radius: 30px;
+      background: #ff6b81;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    button:hover {
+      background: #ff4757;
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 첫 화면 -->
+  <div id="screen1" class="screen">
+    <h1>💖 윤초희</h1>
+    <p>나랑 결혼해 💍</p>
+    <button onclick="goNext()">Yes 💍</button>
+  </div>
+
+  <!-- 두 번째 화면 -->
+  <div id="screen2" class="screen hidden">
+    <h1>💎 조건 안내</h1>
+    <p>
+      결혼을 위해서는<br><br>
+      <strong>💍 까르띠에 반지가 필요합니다 💖</strong>
+    </p>
+  </div>
+
+  <script>
+    function goNext() {
+      document.getElementById("screen1").classList.add("hidden");
+      document.getElementById("screen2").classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
